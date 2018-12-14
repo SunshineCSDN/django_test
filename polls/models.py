@@ -6,9 +6,9 @@ class Question(models.Model):
     pub_data = models.DateTimeField('发布时间')
 
 class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE())
-    Choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    Choice_text = models.CharField("选项内容", max_length=200)
+    votes = models.IntegerField("投票数", default=0)
 
 
 """
